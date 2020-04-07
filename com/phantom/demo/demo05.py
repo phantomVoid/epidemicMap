@@ -1,9 +1,7 @@
 import requests
 from lxml import etree
 
-# todo 爬取贴吧图片
 url = 'https://se.haodd90.com/html/'
-# url = 'https://se.haodd90.com/html/148935.html'
 headers = {
     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36'}
 
@@ -16,10 +14,11 @@ def get_urls(cur_page):
     print("ret_url: >>> " + ret_url)
     return ret_url
 
-cur_page = 125020
+cur_page = 125031
 end_page = 148935
 
-for ii in (cur_page,end_page):
+while int(end_page) > int(cur_page):
+# for ii in (cur_page,end_page):
     cur_item = 1
     cur_url = get_urls(cur_page)
     response = requests.get(cur_url)
