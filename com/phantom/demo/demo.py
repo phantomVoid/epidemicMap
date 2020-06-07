@@ -12,7 +12,7 @@ for i in range(min_range,max_range):
         for p in range(min_range,max_range):
             z=p
             if 230*x+230*y+224*z==851600:
-                print('%s+%s+%s=851600' %(x,y,z))
+                print('230*%s+230*%s+224*%s=851600' %(x,y,z))
 
 end_time = time.time()
 project_time = end_time - start_time
